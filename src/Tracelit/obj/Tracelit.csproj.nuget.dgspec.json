@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/Tracelit.csproj": {}
+  },
+  "projects": {
+    "/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/Tracelit.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/Tracelit.csproj",
+        "projectName": "Tracelit",
+        "projectPath": "/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/Tracelit.csproj",
+        "packagesPath": "/Users/sammy/.nuget/packages/",
+        "outputPath": "/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/sammy/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.7, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.7, )"
+            },
+            "OpenTelemetry": {
+              "target": "Package",
+              "version": "[1.15.3, )"
+            },
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
+              "target": "Package",
+              "version": "[1.15.3, )"
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.15.3, )"
+            },
+            "OpenTelemetry.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.15.2, )"
+            },
+            "OpenTelemetry.Instrumentation.Http": {
+              "target": "Package",
+              "version": "[1.15.1, )"
+            },
+            "OpenTelemetry.Instrumentation.Runtime": {
+              "target": "Package",
+              "version": "[1.15.1, )"
+            },
+            "OpenTelemetry.Instrumentation.SqlClient": {
+              "target": "Package",
+              "version": "[1.15.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.125/libexec/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

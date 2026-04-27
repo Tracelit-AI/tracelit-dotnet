@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "in/q4rzPhLzpxSgD02P+/4J2gBB/Ggpj6qqWxWCCR0cZH1jbUywtI7MK+rmEsRQqlTrTbWeCr4TD1UAmwOwrJw==",
+  "success": true,
+  "projectFilePath": "/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/Tracelit.csproj",
+  "expectedPackageFiles": [
+    "/Users/sammy/.nuget/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.configuration.abstractions/10.0.7/microsoft.extensions.configuration.abstractions.10.0.7.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.configuration.binder/8.0.2/microsoft.extensions.configuration.binder.8.0.2.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.7/microsoft.extensions.dependencyinjection.abstractions.10.0.7.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.diagnostics.abstractions/10.0.7/microsoft.extensions.diagnostics.abstractions.10.0.7.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.fileproviders.abstractions/10.0.7/microsoft.extensions.fileproviders.abstractions.10.0.7.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.hosting.abstractions/10.0.7/microsoft.extensions.hosting.abstractions.10.0.7.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.logging/8.0.0/microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.logging.abstractions/10.0.7/microsoft.extensions.logging.abstractions.10.0.7.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.logging.configuration/8.0.0/microsoft.extensions.logging.configuration.8.0.0.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.options/10.0.7/microsoft.extensions.options.10.0.7.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.options.configurationextensions/8.0.0/microsoft.extensions.options.configurationextensions.8.0.0.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/microsoft.extensions.primitives/10.0.7/microsoft.extensions.primitives.10.0.7.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/opentelemetry/1.15.3/opentelemetry.1.15.3.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/opentelemetry.api/1.15.3/opentelemetry.api.1.15.3.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/opentelemetry.api.providerbuilderextensions/1.15.3/opentelemetry.api.providerbuilderextensions.1.15.3.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/opentelemetry.exporter.opentelemetryprotocol/1.15.3/opentelemetry.exporter.opentelemetryprotocol.1.15.3.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/opentelemetry.extensions.hosting/1.15.3/opentelemetry.extensions.hosting.1.15.3.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/opentelemetry.instrumentation.aspnetcore/1.15.2/opentelemetry.instrumentation.aspnetcore.1.15.2.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/opentelemetry.instrumentation.http/1.15.1/opentelemetry.instrumentation.http.1.15.1.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/opentelemetry.instrumentation.runtime/1.15.1/opentelemetry.instrumentation.runtime.1.15.1.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/opentelemetry.instrumentation.sqlclient/1.15.2/opentelemetry.instrumentation.sqlclient.1.15.2.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/system.diagnostics.diagnosticsource/10.0.7/system.diagnostics.diagnosticsource.10.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}

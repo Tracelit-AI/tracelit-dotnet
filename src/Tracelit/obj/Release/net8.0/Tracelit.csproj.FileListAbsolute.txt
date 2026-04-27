@@ -1,0 +1,12 @@
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/bin/Release/net8.0/Tracelit.deps.json
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/bin/Release/net8.0/Tracelit.dll
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/bin/Release/net8.0/Tracelit.pdb
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/Tracelit.csproj.AssemblyReference.cache
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/Tracelit.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/Tracelit.AssemblyInfoInputs.cache
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/Tracelit.AssemblyInfo.cs
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/Tracelit.csproj.CoreCompileInputs.cache
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/Tracelit.dll
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/refint/Tracelit.dll
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/Tracelit.pdb
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/ref/Tracelit.dll
