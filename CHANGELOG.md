@@ -10,3 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.1.1] - 2026-04-27
+- chore: release v0.1.1
+- Dotnet Tracelit SDK
+
+[0.1.1]: https://github.com/Tracelit-AI/tracelit-dotnet/commits/v0.1.1
+
