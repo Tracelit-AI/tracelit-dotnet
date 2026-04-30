@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <Version>0.1.2</Version>
+    <Version>0.1.3</Version>
     <PackageId>Tracelit</PackageId>
     <Title>Tracelit .NET SDK</Title>
     <Description>Drop-in OpenTelemetry instrumentation for ASP.NET Core and .NET worker apps. Sends traces, metrics, and logs to the Tracelit ingest API via OTLP/HTTP.</Description>
