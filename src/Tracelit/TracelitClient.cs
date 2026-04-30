@@ -202,6 +202,13 @@ public static class TracelitClient
         var builder = Sdk.CreateTracerProviderBuilder()
             .SetResourceBuilder(BuildResource(config))
             .AddSource(config.ResolvedServiceName)
+            .AddAspNetCoreInstrumentation(opts =>
+            {
+                // Emit an OTel "exception" span event on every unhandled exception so
+                // the Tracelit ingest pipeline can extract exception.type, exception.message,
+                // and exception.stacktrace for incident grouping and AI analysis.
+                opts.RecordException = true;
+            })
             .AddHttpClientInstrumentation(opts => opts.RecordException = true)
             .AddSqlClientInstrumentation(opts =>
             {
