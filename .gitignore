@@ -1,1 +1,13 @@
-release.sh
+# Build outputs
+bin/
+obj/
+dist/
+
+# NuGet
+*.nupkg
+*.snupkg
+
+# IDE
+.vs/
+.idea/
+*.user
