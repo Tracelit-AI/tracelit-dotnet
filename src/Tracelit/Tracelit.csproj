@@ -16,7 +16,7 @@
     <PathMap>$(MSBuildProjectDirectory)=/</PathMap>
     <DeterministicSourcePaths>true</DeterministicSourcePaths>
 
-    <Version>0.1.4</Version>
+    <Version>0.1.5</Version>
     <PackageId>Tracelit</PackageId>
     <Title>Tracelit .NET SDK</Title>
     <Description>Drop-in OpenTelemetry instrumentation for ASP.NET Core and .NET worker apps. Sends traces, metrics, and logs to the Tracelit ingest API via OTLP/HTTP.</Description>
