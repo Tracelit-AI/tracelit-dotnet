@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -78,6 +79,15 @@ public static class ServiceCollectionExtensions
         // --- Logging ---
         ConfigureLogging(services, config);
 
+        // --- Auto MVC enrichment ---
+        // Registers TracelitControllerFilter globally so every controller action
+        // automatically gets code.function/namespace/filepath/lineno tags and
+        // exception recording — zero user code changes required.
+        // Configure<MvcOptions> is a no-op when MVC is not registered so this
+        // is safe for non-web hosts (worker services, console apps, etc.).
+        services.Configure<MvcOptions>(opts =>
+            opts.Filters.Add(new Tracing.TracelitControllerFilter()));
+
         // --- Memory poller ---
         services.AddSingleton(sp => new TracelitMetrics(
             config.ResolvedServiceName, TracelitConstants.SdkVersion));
@@ -101,6 +111,11 @@ public static class ServiceCollectionExtensions
             ["telemetry.sdk.name"]      = "tracelit",
             ["telemetry.sdk.version"]   = TracelitConstants.SdkVersion,
         };
+
+        // Emit the running commit SHA so the Tracelit server can fetch the
+        // exact source file from GitHub when analysing an incident.
+        if (!string.IsNullOrWhiteSpace(config.CommitSha))
+            attributes["service.commit_sha"] = config.CommitSha!;
 
         foreach (var kv in config.ResourceAttributes)
             attributes[kv.Key] = kv.Value;

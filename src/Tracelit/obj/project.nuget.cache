@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "in/q4rzPhLzpxSgD02P+/4J2gBB/Ggpj6qqWxWCCR0cZH1jbUywtI7MK+rmEsRQqlTrTbWeCr4TD1UAmwOwrJw==",
+  "dgSpecHash": "YhN/Kz77Ihc8p07k4WdeucX4s//OuNopqXSB/N0KsZExTkH/RWgT5JOOxlnts/ijxSwzQ+tMsb4vzll2zVniaw==",
   "success": true,
   "projectFilePath": "/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/Tracelit.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,9 @@
     "/Users/sammy/.nuget/packages/opentelemetry.instrumentation.http/1.15.1/opentelemetry.instrumentation.http.1.15.1.nupkg.sha512",
     "/Users/sammy/.nuget/packages/opentelemetry.instrumentation.runtime/1.15.1/opentelemetry.instrumentation.runtime.1.15.1.nupkg.sha512",
     "/Users/sammy/.nuget/packages/opentelemetry.instrumentation.sqlclient/1.15.2/opentelemetry.instrumentation.sqlclient.1.15.2.nupkg.sha512",
-    "/Users/sammy/.nuget/packages/system.diagnostics.diagnosticsource/10.0.7/system.diagnostics.diagnosticsource.10.0.7.nupkg.sha512"
+    "/Users/sammy/.nuget/packages/system.collections.immutable/10.0.7/system.collections.immutable.10.0.7.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/system.diagnostics.diagnosticsource/10.0.7/system.diagnostics.diagnosticsource.10.0.7.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/system.reflection.metadata/10.0.7/system.reflection.metadata.10.0.7.nupkg.sha512"
   ],
   "logs": []
 }

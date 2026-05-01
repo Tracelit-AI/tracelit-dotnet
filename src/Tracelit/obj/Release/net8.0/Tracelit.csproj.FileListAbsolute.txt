@@ -10,3 +10,4 @@
 /Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/refint/Tracelit.dll
 /Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/Tracelit.pdb
 /Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/ref/Tracelit.dll
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/Release/net8.0/Tracelit.sourcelink.json

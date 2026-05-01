@@ -5,6 +5,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
+    <!--
+      Strips the absolute build-machine prefix from [CallerFilePath] values so
+      that code.filepath span attributes are repo-relative (e.g.
+      "Controllers/ProductsController.cs") rather than absolute paths like
+      "/home/runner/work/products-api/Controllers/ProductsController.cs".
+      This is required for the Tracelit server to fetch the correct file from
+      GitHub when resolving source context for an incident.
+    -->
+    <PathMap>$(MSBuildProjectDirectory)=/</PathMap>
+    <DeterministicSourcePaths>true</DeterministicSourcePaths>
+
     <Version>0.1.3</Version>
     <PackageId>Tracelit</PackageId>
     <Title>Tracelit .NET SDK</Title>
@@ -24,6 +35,16 @@
     <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
   </ItemGroup>
 
+  <!--
+    Framework reference gives us IActionFilter, IExceptionFilter, MvcOptions, and
+    ControllerActionDescriptor for zero-friction ASP.NET Core auto-instrumentation.
+    Using FrameworkReference (not PackageReference) means no assemblies are added
+    to the output — the types are resolved from the shared runtime.
+  -->
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.7" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.7" />
@@ -34,6 +55,7 @@
     <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.15.1" />
     <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.15.1" />
     <PackageReference Include="OpenTelemetry.Instrumentation.SqlClient" Version="1.15.2" />
+    <PackageReference Include="System.Reflection.Metadata" Version="10.0.7" />
   </ItemGroup>
 
 </Project>

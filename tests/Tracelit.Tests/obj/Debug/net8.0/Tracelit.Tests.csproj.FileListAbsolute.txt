@@ -146,3 +146,6 @@
 /Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/tests/Tracelit.Tests/obj/Debug/net8.0/Tracelit.Tests.pdb
 /Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/tests/Tracelit.Tests/obj/Debug/net8.0/Tracelit.Tests.genruntimeconfig.cache
 /Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/tests/Tracelit.Tests/obj/Debug/net8.0/ref/Tracelit.Tests.dll
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/tests/Tracelit.Tests/bin/Debug/net8.0/System.Collections.Immutable.dll
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/tests/Tracelit.Tests/bin/Debug/net8.0/System.Reflection.Metadata.dll
+/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/tests/Tracelit.Tests/obj/Debug/net8.0/Tracelit.Tests.sourcelink.json

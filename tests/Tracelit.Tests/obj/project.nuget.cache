@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QV+uRsOKWGoxaGhUZVDnzbhKjd0IU0WDZGI3WMrRS0dBn4F5QNDEaahVPZ+vSXyBlsOl1JI1/Fi4yv6hsWR04w==",
+  "dgSpecHash": "XIY2yEilqoHuNCr+LUw9qD7bFrmMQZeyFOptxd4n/Bix3rBCCWEM8BurQvIRUz402OT7iJIo5RsxFJHg4Luzjw==",
   "success": true,
   "projectFilePath": "/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/tests/Tracelit.Tests/Tracelit.Tests.csproj",
   "expectedPackageFiles": [
@@ -74,6 +74,7 @@
     "/Users/sammy/.nuget/packages/system.buffers/4.3.0/system.buffers.4.3.0.nupkg.sha512",
     "/Users/sammy/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
     "/Users/sammy/.nuget/packages/system.collections.concurrent/4.3.0/system.collections.concurrent.4.3.0.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/system.collections.immutable/10.0.7/system.collections.immutable.10.0.7.nupkg.sha512",
     "/Users/sammy/.nuget/packages/system.console/4.3.0/system.console.4.3.0.nupkg.sha512",
     "/Users/sammy/.nuget/packages/system.diagnostics.debug/4.3.0/system.diagnostics.debug.4.3.0.nupkg.sha512",
     "/Users/sammy/.nuget/packages/system.diagnostics.diagnosticsource/10.0.7/system.diagnostics.diagnosticsource.10.0.7.nupkg.sha512",
@@ -100,7 +101,7 @@
     "/Users/sammy/.nuget/packages/system.reflection.emit.ilgeneration/4.3.0/system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "/Users/sammy/.nuget/packages/system.reflection.emit.lightweight/4.3.0/system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "/Users/sammy/.nuget/packages/system.reflection.extensions/4.3.0/system.reflection.extensions.4.3.0.nupkg.sha512",
-    "/Users/sammy/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512",
+    "/Users/sammy/.nuget/packages/system.reflection.metadata/10.0.7/system.reflection.metadata.10.0.7.nupkg.sha512",
     "/Users/sammy/.nuget/packages/system.reflection.primitives/4.3.0/system.reflection.primitives.4.3.0.nupkg.sha512",
     "/Users/sammy/.nuget/packages/system.reflection.typeextensions/4.3.0/system.reflection.typeextensions.4.3.0.nupkg.sha512",
     "/Users/sammy/.nuget/packages/system.resources.resourcemanager/4.3.0/system.resources.resourcemanager.4.3.0.nupkg.sha512",

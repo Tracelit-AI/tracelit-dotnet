@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tracelit.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af60177b70d4df4fa4efbc66ba50ede20c031a47")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tracelit.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tracelit.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

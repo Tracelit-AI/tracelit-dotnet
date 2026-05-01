@@ -277,6 +277,11 @@ public static class TracelitClient
             ["telemetry.sdk.version"]   = TracelitConstants.SdkVersion,
         };
 
+        // Emit the running commit SHA so the Tracelit server can fetch the
+        // exact source file from GitHub when analysing an incident.
+        if (!string.IsNullOrWhiteSpace(config.CommitSha))
+            attributes["service.commit_sha"] = config.CommitSha!;
+
         foreach (var kv in config.ResourceAttributes)
             attributes[kv.Key] = kv.Value;
 
