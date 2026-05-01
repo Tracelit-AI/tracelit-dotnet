@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.1.5] - 2026-05-01
+- chore: release v0.1.5
+- chore: release v0.1.4
+- feat: enhance ASP.NET Core instrumentation with commit SHA tracking and source file resolution
+- chore: update CHANGELOG.md for v0.1.3 [skip ci]
+
+[0.1.5]: https://github.com/Tracelit-AI/tracelit-dotnet/compare/v0.1.3...v0.1.5
+
 ## [0.1.3] - 2026-04-30
 - chore: release v0.1.3
 - chore: release v0.1.2
