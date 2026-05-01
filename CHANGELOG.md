@@ -10,6 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.1.3] - 2026-04-30
+- chore: release v0.1.3
+- chore: release v0.1.2
+- chore: update .gitignore to include build outputs, NuGet packages, and IDE files
+- feat: add exception recording to AspNetCore instrumentation for improved error tracking
+- chore: update CHANGELOG.md for v0.1.1 [skip ci]
+
+[0.1.3]: https://github.com/Tracelit-AI/tracelit-dotnet/compare/v0.1.1...v0.1.3
+
 ## [0.1.1] - 2026-04-27
 - chore: release v0.1.1
 - Dotnet Tracelit SDK
