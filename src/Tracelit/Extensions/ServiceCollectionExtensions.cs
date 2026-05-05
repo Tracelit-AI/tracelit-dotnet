@@ -30,7 +30,7 @@ public static class ServiceCollectionExtensions
     ///   <item>OTLP trace export with <see cref="ErrorAlwaysOnSampler"/> + <see cref="ErrorSpanProcessor"/>.</item>
     ///   <item>OTLP log export correlated to the active trace via <c>ILoggingBuilder</c>.</item>
     ///   <item>OTLP metrics export with a 60-second periodic reader.</item>
-    ///   <item><see cref="MemoryPollerService"/> as a hosted background service.</item>
+    ///   <item><see cref="MemoryPollerService"/> and <see cref="CpuPollerService"/> as hosted background services.</item>
     /// </list>
     ///
     /// Example:
@@ -88,10 +88,11 @@ public static class ServiceCollectionExtensions
         services.Configure<MvcOptions>(opts =>
             opts.Filters.Add(new Tracing.TracelitControllerFilter()));
 
-        // --- Memory poller ---
+        // --- Memory and CPU pollers ---
         services.AddSingleton(sp => new TracelitMetrics(
             config.ResolvedServiceName, TracelitConstants.SdkVersion));
         services.AddHostedService<MemoryPollerService>();
+        services.AddHostedService<CpuPollerService>();
 
         // Expose config for static façade and diagnostics.
         services.AddSingleton(config);

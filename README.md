@@ -37,7 +37,7 @@ That is all. The SDK wires up traces, logs, and metrics automatically.
 ```csharp
 TracelitClient.Configure(config =>
 {
-    config.ApiKey      = "tl_live_abc123";
+    config.ApiKey      = Environment.GetEnvironmentVariable("TRACELIT_API_KEY");
     config.ServiceName = "my-worker";
     config.Environment = "production";
 });
@@ -66,7 +66,7 @@ TracelitClient.Shutdown();
 ```csharp
 builder.Services.AddTracelit(config =>
 {
-    config.ApiKey      = "tl_live_abc123";
+    config.ApiKey      = Environment.GetEnvironmentVariable("TRACELIT_API_KEY");
     config.ServiceName = "orders-api";
     config.ResourceAttributes = new()
     {
@@ -195,59 +195,6 @@ config.Enabled = false;
 
 ---
 
-## Running the SDK's own tests
+## Changelog
 
-```bash
-dotnet test
-```
-
----
-
-## Releasing
-
-Use the included helper script to cut a release locally:
-
-```bash
-./release.sh patch          # x.y.Z+1
-./release.sh minor          # x.Y+1.0
-./release.sh major          # X+1.0.0
-./release.sh 1.2.3          # explicit version
-./release.sh patch --dry-run
-```
-
-The script bumps `<Version>` in `src/Tracelit/Tracelit.csproj`, commits the change, pushes it to `main`, then creates and pushes an annotated tag. Pushing the tag triggers the [release workflow](.github/workflows/release.yml), which runs tests, packs and publishes to NuGet, and creates a GitHub Release with an auto-generated CHANGELOG entry.
-
-See [CHANGELOG.md](CHANGELOG.md) for the release history.
-
----
-
-## Design specification
-
-The prompts and design notes used to generate this SDK are in [llm_prompt.txt](llm_prompt.txt).
-
----
-
-## Project structure
-
-```
-src/Tracelit/
-├── TracelitClient.cs               Static façade for non-DI usage
-├── TracelitConfiguration.cs        Config with env var defaults + Validate()
-├── TracelitConstants.cs            SDK version constant
-├── AssemblyInfo.cs                 InternalsVisibleTo for test project
-├── Tracing/
-│   ├── ErrorAlwaysOnSampler.cs     Upgrades Drop→RecordOnly for error capture
-│   └── ErrorSpanProcessor.cs       Force-exports unsampled error spans
-├── Metrics/
-│   ├── TracelitMetrics.cs          Counter/Histogram/Gauge wrappers
-│   └── MemoryPollerService.cs      Background process.memory.rss polling
-└── Extensions/
-    └── ServiceCollectionExtensions.cs  AddTracelit() DI integration
-
-tests/Tracelit.Tests/
-├── ConfigurationTests.cs           Validate(), defaults, edge cases
-├── ErrorAlwaysOnSamplerTests.cs    Drop→RecordOnly, description
-├── ErrorSpanProcessorTests.cs      OK/sampled/unsampled/error paths
-├── TracelitClientTests.cs          Configure/Start/Shutdown lifecycle
-└── MetricsTests.cs                 Counter/Histogram/Gauge, dispose safety
-```
+See the [release history](https://docs.tracelit.io/changelog) on the Tracelit docs.
