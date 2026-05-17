@@ -5,12 +5,12 @@
   },
   "projects": {
     "/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/Tracelit.csproj": {
-      "version": "0.1.3",
+      "version": "0.1.6",
       "restore": {
         "projectUniqueName": "/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/Tracelit.csproj",
         "projectName": "Tracelit",
         "projectPath": "/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/Tracelit.csproj",
-        "packagesPath": "/Users/sammy/.nuget/packages/",
+        "packagesPath": "/var/folders/kf/4rql1wl562ld9xwv7sznqtvc0000gn/T/cursor-sandbox-cache/120fe654308eb5106cf84c3400008909/nuget",
         "outputPath": "/Users/sammy/go/src/github.com/samuelwoodcore/projects/tracelit/sdk/net-core/src/Tracelit/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [

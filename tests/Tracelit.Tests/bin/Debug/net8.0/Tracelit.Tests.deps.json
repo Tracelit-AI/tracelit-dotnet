@@ -13,7 +13,7 @@
           "Microsoft.Extensions.Hosting": "10.0.7",
           "Microsoft.NET.Test.Sdk": "17.6.0",
           "Moq": "4.20.72",
-          "Tracelit": "0.1.3",
+          "Tracelit": "0.1.6",
           "coverlet.collector": "6.0.0",
           "xunit": "2.4.2",
           "xunit.runner.visualstudio": "2.4.5"
@@ -1603,7 +1603,7 @@
         }
       },
       "xunit.runner.visualstudio/2.4.5": {},
-      "Tracelit/0.1.3": {
+      "Tracelit/0.1.6": {
         "dependencies": {
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.7",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.7",
@@ -2559,7 +2559,7 @@
       "path": "xunit.runner.visualstudio/2.4.5",
       "hashPath": "xunit.runner.visualstudio.2.4.5.nupkg.sha512"
     },
-    "Tracelit/0.1.3": {
+    "Tracelit/0.1.6": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

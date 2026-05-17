@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Concurrent;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using OpenTelemetry;
 using OpenTelemetry.Trace;
 
@@ -37,7 +39,11 @@ namespace Tracelit.Tracing;
 /// </summary>
 internal sealed class ErrorSpanProcessor : BaseProcessor<Activity>
 {
+    private const int QueueCapacity = 512;
+
     private readonly BaseExporter<Activity> _exporter;
+    private readonly BlockingCollection<Activity> _queue;
+    private readonly Task _worker;
 
     /// <param name="exporter">
     /// A dedicated OTLP exporter instance owned exclusively by this processor.
@@ -46,6 +52,8 @@ internal sealed class ErrorSpanProcessor : BaseProcessor<Activity>
     public ErrorSpanProcessor(BaseExporter<Activity> exporter)
     {
         _exporter = exporter ?? throw new ArgumentNullException(nameof(exporter));
+        _queue = new BlockingCollection<Activity>(QueueCapacity);
+        _worker = Task.Run(ProcessQueue);
     }
 
     /// <summary>
@@ -69,9 +77,8 @@ internal sealed class ErrorSpanProcessor : BaseProcessor<Activity>
             if ((activity.ActivityTraceFlags & ActivityTraceFlags.Recorded) != 0)
                 return;
 
-            // Force-export this unsampled error span so it always appears in Tracelit
-            // regardless of the sample ratio configured on the tracer provider.
-            _exporter.Export(new Batch<Activity>(new[] { activity }, 1));
+            // Queue for background export; never block the request thread.
+            _queue.TryAdd(activity);
         }
         catch
         {
@@ -83,20 +90,67 @@ internal sealed class ErrorSpanProcessor : BaseProcessor<Activity>
     /// Flushes the underlying exporter synchronously.
     /// </summary>
     protected override bool OnForceFlush(int timeoutMilliseconds)
-        => _exporter.ForceFlush(timeoutMilliseconds);
+    {
+        return _exporter.ForceFlush(timeoutMilliseconds);
+    }
 
     /// <summary>
     /// Shuts down and flushes the owned exporter.
     /// </summary>
     protected override bool OnShutdown(int timeoutMilliseconds)
-        => _exporter.Shutdown(timeoutMilliseconds);
+    {
+        try
+        {
+            _queue.CompleteAdding();
+            _worker.Wait(timeoutMilliseconds > 0 ? timeoutMilliseconds : 1000);
+        }
+        catch
+        {
+            // Never fail shutdown due to worker stop issues.
+        }
+        return _exporter.Shutdown(timeoutMilliseconds);
+    }
 
     protected override void Dispose(bool disposing)
     {
         if (disposing)
+        {
+            try
+            {
+                _queue.CompleteAdding();
+                _worker.Wait(1000);
+            }
+            catch
+            {
+                // best effort
+            }
+            _queue.Dispose();
             _exporter.Dispose();
+        }
 
         base.Dispose(disposing);
+    }
+
+    private void ProcessQueue()
+    {
+        try
+        {
+            foreach (var activity in _queue.GetConsumingEnumerable())
+            {
+                try
+                {
+                    _exporter.Export(new Batch<Activity>(new[] { activity }, 1));
+                }
+                catch
+                {
+                    // Never let exporter failures crash app worker threads.
+                }
+            }
+        }
+        catch
+        {
+            // Background worker must never throw out.
+        }
     }
 
     // ─── Helpers ─────────────────────────────────────────────────────────────
