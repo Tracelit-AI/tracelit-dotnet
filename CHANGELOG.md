@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.1.8] - 2026-05-17
+- chore: release v0.1.8
+- chore: release v0.1.7
+- feat: implement asynchronous error span processing in ErrorSpanProcessor
+- chore: update CHANGELOG.md for v0.1.6 [skip ci]
+
+[0.1.8]: https://github.com/Tracelit-AI/tracelit-dotnet/compare/v0.1.6...v0.1.8
+
 ## [0.1.6] - 2026-05-05
 - chore: release v0.1.6
 - docs: clean up README for public release and add CPU poller service
