@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.1.6] - 2026-05-05
+- chore: release v0.1.6
+- docs: clean up README for public release and add CPU poller service
+- chore: update CHANGELOG.md for v0.1.5 [skip ci]
+
+[0.1.6]: https://github.com/Tracelit-AI/tracelit-dotnet/compare/v0.1.5...v0.1.6
+
 ## [0.1.5] - 2026-05-01
 - chore: release v0.1.5
 - chore: release v0.1.4
